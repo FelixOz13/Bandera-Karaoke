@@ -64,6 +64,7 @@ app.get("/lyrics", async (req, res) => {
   res.json({ lyrics })
 })
 
-app.listen(8889, () => {
-  console.log("Server listening on port 8889")
-})
+const port = process.env.PORT || 8889;
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+});
